@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Area do Quadrado</title>
+        <style>
+            body{
+                width: 800px;/*Largura da pag*/
+                margin: auto;/* espaçamento externo auto à esquerda e a direita*/
+                background-color: aqua;
+                border: 10px solid red;
+                border-radius: 15px;
+                margin-top: 50px;/*espaçamento externo superior*/
+                padding: 10px;/*espaçamento interno*/
+            }
+            header{
+                background-color: black;
+                font-size: 25px;
+                font-style: bold;
+                color: white;
+                margin-bottom: 10px;
+                text-align: center;
+
+            }
+            div{
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            Calculando a área do Quadrado
+        </header>
+        <main>
+            <div>
+                <label>Digite o valor da base: </label>
+                <input type="number" id="base"/>
+            </div>
+            <div>
+                <label>Digite o valor da altura: </label>
+                <input type="number" id="altura"/>
+            </div>
+
+            <div>
+                <button type="button" onclick="calcular()">CALCULAR</button>
+            </div>
+            <div>
+                <p id="resultado"></p>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            function calcular(){
+                let valorBase = parseInt(document.getElementById("base").value)
+                let valorAlt = parseInt(document.getElementById("altura").value)
+
+                let res = valorBase * valorAlt
+
+                document.getElementById("resultado").innerHTML = `Area do quadrado: ${res}`
+
+            }
+        </script>
+    </body>
+</html>

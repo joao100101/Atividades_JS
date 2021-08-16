@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calcular Salario</title>
+        <style>
+            body{
+                width: 800px;/*Largura da pag*/
+                margin: auto;/* espaçamento externo auto à esquerda e a direita*/
+                background-color: aqua;
+                border: 10px solid red;
+                border-radius: 15px;
+                margin-top: 50px;/*espaçamento externo superior*/
+                padding: 10px;/*espaçamento interno*/
+            }
+            header{
+                background-color: black;
+                font-size: 25px;
+                font-style: bold;
+                color: white;
+                margin-bottom: 10px;
+                text-align: center;
+
+            }
+            div{
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            Calculo do Salário
+        </header>
+        <main>
+            <div>
+                <label>Digite seu salario: </label>
+                <br>
+                <input type="number" id="salario"/>
+            </div>
+            <div>
+                <label>Digite o valor da primeira conta: </label>
+                <br>
+                <input type="number" id="valor_conta1"/>
+            </div>
+            <div>
+                <label>Digite o valor da segunda conta: </label>
+                <br>
+                <input type="number" id="valor_conta2"/>
+            </div>
+            <div>
+                <button type="button" onclick="calcular()">CALCULAR</button>
+            </div>
+            <div>
+                <p id="resultado"></p>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            function calcular(){
+                let sal = parseInt(document.getElementById("salario").value)
+                let val_cont1 = parseFloat(document.getElementById("valor_conta1").value)
+                let val_cont2 = parseFloat(document.getElementById("valor_conta2").value)
+                let salario_final = sal - ((val_cont1*2/100)+(val_cont2*2/100))
+                salario_final -= (val_cont1 + val_cont2)
+
+                document.getElementById("resultado").innerHTML = "Seu salário final será de: R$ " + salario_final
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Area do Losango</title>
+        <style>
+            body{
+                width: 800px;/*Largura da pag*/
+                margin: auto;/* espaçamento externo auto à esquerda e a direita*/
+                background-color: aqua;
+                border: 10px solid red;
+                border-radius: 15px;
+                margin-top: 50px;/*espaçamento externo superior*/
+                padding: 10px;/*espaçamento interno*/
+            }
+            header{
+                background-color: black;
+                font-size: 25px;
+                font-style: bold;
+                color: white;
+                margin-bottom: 10px;
+                text-align: center;
+
+            }
+            div{
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            Calculando a área do Losango
+        </header>
+        <main>
+            <div>
+                <label>Digite o valor da diagonal maior: </label>
+                <br>
+                <input type="number" id="diagonalMaior"/>
+            </div>
+            <div>
+                <label>Digite o valor da diagonal menor: </label>
+                <br>
+                <input type="number" id="diagonalMenor"/>
+            </div>
+
+            <div>
+                <button type="button" onclick="calcular()">CALCULAR</button>
+            </div>
+            <div>
+                <p id="resultado"></p>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            function calcular(){
+                let diagMaior = parseInt(document.getElementById("diagonalMaior").value)
+                let diagMenor = parseInt(document.getElementById("diagonalMenor").value)
+
+                let res = (diagMaior * diagMenor)/2
+
+                document.getElementById("resultado").innerHTML = `Area do losango: ${res}`
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calculo da Hipotenusa</title>
+        <style>
+            body{
+                width: 800px;/*Largura da pag*/
+                margin: auto;/* espaçamento externo auto à esquerda e a direita*/
+                background-color: aqua;
+                border: 10px solid red;
+                border-radius: 15px;
+                margin-top: 50px;/*espaçamento externo superior*/
+                padding: 10px;/*espaçamento interno*/
+            }
+            header{
+                background-color: black;
+                font-size: 25px;
+                font-style: bold;
+                color: white;
+                margin-bottom: 10px;
+                text-align: center;
+
+            }
+            div{
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            Vamos calcular a Hipotenusa!
+        </header>
+        <main>
+            <div>
+                <label>Digite o lado A do triângulo: </label>
+                <br>
+                <input type="number" id="lado_a"/>
+            </div>
+            <div>
+                <label>Digite o lado B do triângulo: </label>
+                <br>
+                <input type="number" id="lado_b"/>
+            </div>
+            <div>
+                <button type="button" onclick="calcular()">CALCULAR</button>
+            </div>
+            <div>
+                <p id="resultado"></p>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            function calcular(){
+                let a = parseInt(document.getElementById("lado_a").value)
+                let b = parseFloat(document.getElementById("lado_b").value)
+                let hipotenusa = Math.sqrt(a**2 + b**2)
+
+                document.getElementById("resultado").innerHTML = "Hipotenusa = " + hipotenusa
+            }
+        </script>
+    </body>
+</html>

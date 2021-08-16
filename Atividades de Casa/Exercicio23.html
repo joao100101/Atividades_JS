@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Medindo Angulo</title>
+        <style>
+            body{
+                width: 800px;/*Largura da pag*/
+                margin: auto;/* espaçamento externo auto à esquerda e a direita*/
+                background-color: aqua;
+                border: 10px solid red;
+                border-radius: 15px;
+                margin-top: 50px;/*espaçamento externo superior*/
+                padding: 10px;/*espaçamento interno*/
+            }
+            header{
+                background-color: black;
+                font-size: 25px;
+                font-style: bold;
+                color: white;
+                margin-bottom: 10px;
+                text-align: center;
+
+            }
+            div{
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            O Calculo do triangulo...
+        </header>
+        <main>
+            <div>
+                <label>Digite a medida do primeiro angulo: </label>
+                <br>
+                <input type="number" id="angulo_a"/>
+            </div>
+            <div>
+                <label>Digite a medida do segundo angulo: </label>
+                <br>
+                <input type="number" id="angulo_b"/>
+            </div>
+            <div>
+                <button type="button" onclick="calcular()">CALCULAR</button>
+            </div>
+            <div>
+                <p id="resultado"></p>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            function calcular(){
+                let a = parseInt(document.getElementById("angulo_a").value)
+                let b = parseInt(document.getElementById("angulo_b").value)
+                let c = 180 - (a+b)
+
+
+                document.getElementById("resultado").innerHTML = "O terceiro angulo mede: " + c + " graus"
+            }
+        </script>
+    </body>
+</html>

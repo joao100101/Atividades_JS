@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Converter Temperatura</title>
+        <style>
+            body{
+                width: 800px;/*Largura da pag*/
+                margin: auto;/* espaçamento externo auto à esquerda e a direita*/
+                background-color: aqua;
+                border: 10px solid red;
+                border-radius: 15px;
+                margin-top: 50px;/*espaçamento externo superior*/
+                padding: 10px;/*espaçamento interno*/
+            }
+            header{
+                background-color: black;
+                font-size: 25px;
+                font-style: bold;
+                color: white;
+                margin-bottom: 10px;
+                text-align: center;
+
+            }
+            div{
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            Converter °C para °F
+        </header>
+        <main>
+            <div>
+                <label>Digite a Temperatura em °C: </label>
+                <br>
+                <input type="number" id="temp_c"/>
+            </div>
+            <div>
+                <button type="button" onclick="calcular()">CALCULAR</button>
+            </div>
+            <div>
+                <p id="resultado"></p>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            function calcular(){
+                let temp_c = parseInt(document.getElementById("temp_c").value)
+                let temp_f = (temp_c * 9/5) + 32 
+
+                document.getElementById("resultado").innerHTML = "" + temp_c + "°C em Farenheit fica " + temp_f + "°F" 
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calcular Salário</title>
+        <style>
+            body{
+                width: 800px;/*Largura da pag*/
+                margin: auto;/* espaçamento externo auto à esquerda e a direita*/
+                background-color: aqua;
+                border: 10px solid red;
+                border-radius: 15px;
+                margin-top: 50px;/*espaçamento externo superior*/
+                padding: 10px;/*espaçamento interno*/
+            }
+            header{
+                background-color: black;
+                font-size: 25px;
+                font-style: bold;
+                color: white;
+                margin-bottom: 10px;
+                text-align: center;
+
+            }
+            div{
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            Calcular Salário
+        </header>
+        <main>
+            <div>
+                <label>Digite seu salário: </label>
+                <input type="number" id="salario"/>
+            </div>
+            <div>
+                <label>Digite a quantidade de vendas: </label>
+                <input type="number" id="qtdVendas"/>
+            </div>
+            <div>
+                <button type="button" onclick="calcular()">CALCULAR</button>
+            </div>
+            <div>
+                <p id="resultado"></p>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            function calcular(){
+                let sal = parseInt(document.getElementById("salario").value)
+                let vendas = parseInt(document.getElementById("qtdVendas").value)
+                let comissao = parseInt(vendas * ((4*sal)/100))
+
+                let res = sal + comissao
+
+                document.getElementById("resultado").innerHTML = `Salário final: ${res}`
+
+            }
+        </script>
+    </body>
+</html>

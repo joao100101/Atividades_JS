@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calculo do Salário</title>
+        <style>
+            body{
+                width: 800px;/*Largura da pag*/
+                margin: auto;/* espaçamento externo auto à esquerda e a direita*/
+                background-color: aqua;
+                border: 10px solid red;
+                border-radius: 15px;
+                margin-top: 50px;/*espaçamento externo superior*/
+                padding: 10px;/*espaçamento interno*/
+            }
+            header{
+                background-color: black;
+                font-size: 25px;
+                font-style: bold;
+                color: white;
+                margin-bottom: 10px;
+                text-align: center;
+
+            }
+            div{
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            Calculando Salário
+        </header>
+        <main>
+            <div>
+                <label>Digite a quantidade de horas trabalhadas: </label>
+                <br>
+                <input type="number" id="horas_trabalhadas"/>
+            </div>
+            <div>
+                <label>Digite o valor do salário mínimo: </label>
+                <br>
+                <input type="number" id="salario_min"/>
+            </div>
+            <div>
+                <label>Digite a quantidade de horas extras trabalhadas: </label>
+                <br>
+                <input type="number" id="horas_extras"/>
+            </div>
+            <div>
+                <button type="button" onclick="calcular()">CALCULAR</button>
+            </div>
+            <div>
+                <p id="resultado"></p>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            function calcular(){
+                let horas_trabalhadas = parseFloat(document.getElementById("horas_trabalhadas").value)
+                let sal_min = parseFloat(document.getElementById("salario_min").value)
+                let horas_extras = parseFloat(document.getElementById("horas_extras").value)
+                let val_horas_extras = horas_extras * (sal_min/4)
+                let val_hora_trabalhadas = horas_trabalhadas * (sal_min/8)
+                let salario_bruto = val_hora_trabalhadas * horas_trabalhadas
+                let salario_final = salario_bruto + (horas_extras * val_horas_extras)
+
+
+                document.getElementById("resultado").innerHTML = "Você irá receber: R$ " + salario_final
+            }
+        </script>
+    </body>
+</html>

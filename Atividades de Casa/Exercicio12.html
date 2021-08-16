@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calculo de Salário</title>
+        <style>
+            body{
+                width: 800px;/*Largura da pag*/
+                margin: auto;/* espaçamento externo auto à esquerda e a direita*/
+                background-color: aqua;
+                border: 10px solid red;
+                border-radius: 15px;
+                margin-top: 50px;/*espaçamento externo superior*/
+                padding: 10px;/*espaçamento interno*/
+            }
+            header{
+                background-color: black;
+                font-size: 25px;
+                font-style: bold;
+                color: white;
+                margin-bottom: 10px;
+                text-align: center;
+
+            }
+            div{
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            Calculando salários do funcionário
+        </header>
+        <main>
+            <div>
+                <label>Digite o valor do salário minimo: </label>
+                <br>
+                <input type="number" id="salarioMinimo"/>
+            </div>
+            <div>
+                <label>Digite o seu salário: </label>
+                <br>
+                <input type="number" id="salario"/>
+            </div>
+
+            <div>
+                <button type="button" onclick="calcular()">CALCULAR</button>
+            </div>
+            <div>
+                <p id="resultado"></p>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            function calcular(){
+                let sal = parseInt(document.getElementById("salario").value)
+                let salMin = parseInt(document.getElementById("salarioMinimo").value)
+
+                let res = sal/salMin
+
+                document.getElementById("resultado").innerHTML = `Esse funcionário ganha ${res.toFixed(2)} salários mínimos.`
+
+            }
+        </script>
+    </body>
+</html>
