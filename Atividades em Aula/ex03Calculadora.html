@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <script>
+        let num1 = Number(prompt("Digite um numero: "))
+        let num2 = Number(prompt("Digite outro numero: "))
+        let operador = prompt("Digite o operador para realizar a conta: ")
+        let resultado = 0;
+        if(!isNaN(num1) && !isNaN(num2)){
+            switch(operador){
+                case "*":
+                    resultado = num1 * num2
+                    break
+                case 'X':
+                    resultado = num1 * num2
+                    break
+                case 'x':
+                    resultado = num1 * num2
+                    break
+                case '+':
+                    resultado = num1 + num2
+                    break
+                case '-':
+                    resultado = num1 - num2
+                    break
+                case '/':
+                    resultado = num1 / num2
+                    break
+                case ':':
+                    resultado = num1 / num2
+                    break
+                default:
+                    alert('Esse não é um operador válido, operadores (+, -, *, x, X, /, :)')
+            }
+            document.write("Resultado: " + num1 + operador + num2 + " = " + resultado)
+
+        }else{
+            alert("Este não é um número válido!")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
