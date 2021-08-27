@@ -1,0 +1,13 @@
+*{
+    background-color: aqua;
+    text-align: center;
+}
+
+blockquote{
+    text-align: right;
+    font-style: italic;
+}
+
+h2, p{
+    text-align: left;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter Placa</title>
+    <script>
+        let digito
+        do{
+            digito = parseInt(prompt("Digite um digito válido entre 0 e 9: "))
+        }while(!isNaN(digito) && (digito < 0 || digito > 9))
+
+        let letra
+        if(!isNaN(digito)){
+            switch(digito){
+                case 0:
+                    letra = "A"
+                    break
+                case 1:
+                    letra = "B"
+                    break
+                case 2:
+                    letra = "D"
+                    break
+                case 3:
+                    letra = "D"
+                    break
+                case 4:
+                    letra = "E"
+                    break
+                case 5:
+                    letra = "F"
+                    break
+                case 6:
+                    letra = "G"
+                    break
+                case 7:
+                    letra = "H"
+                    break
+                case 8:
+                    letra = "I"
+                    break
+                case 9:
+                    letra = "J"
+                    break
+            }  
+            alert(`O digito ${digito} é equivalente à letra ${letra}`) 
+    }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
