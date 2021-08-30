@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoBuracon</title>
+    <script>
+        let extensao = 0
+        do{
+            extensao = parseInt(prompt("Digite a extensão da rodovia"))
+
+        }while(isNaN(extensao) || extensao < 200)
+        while(extensao > 0){
+            extensao--
+            if(extensao % 31 == 0){
+                document.write('<hr>' + "Pedagio no km: " + extensao + '<br>')
+            }
+            if(extensao % 23 == 0){
+                document.write('<hr>' + "Atendimento no km: " + extensao + '<br>')
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
