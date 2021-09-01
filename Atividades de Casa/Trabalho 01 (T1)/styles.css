@@ -1,4 +1,4 @@
-*{
+body{
     background-color: aqua;
     text-align: center;
 }
@@ -8,6 +8,6 @@ blockquote{
     font-style: italic;
 }
 
-h2, p{
+h2, p, li{
     text-align: left;
 }
