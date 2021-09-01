@@ -3,6 +3,10 @@ body{
     text-align: center;
 }
 
+img[class="my-photo"]{
+    border: 5px solid greenyellow;
+    border-radius: 10px;
+}
 blockquote{
     text-align: right;
     font-style: italic;
