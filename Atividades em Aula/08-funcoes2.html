@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções 2</title>
+    <script>
+        function calcArea(base, altura, tipo){
+            let area
+
+            switch (tipo) {
+                case 'R'://Retangulo
+                    area = base * altura
+                    break;
+                case 'Q'://Quadrado
+                    area = base * altura
+                    break;
+                case 'T'://Triangulo
+                    area = (base*altura)/2
+                    break;
+                case 'E'://Elipse
+                    area = (base/2) * (altura/2) * Math.PI;
+                    break;
+                default:
+                    area = null
+                    break;
+            }
+            return area
+        }
+
+        let base = prompt("Digite a base: ")
+        let altura = prompt("Digite a altura: ")
+        let tipo = prompt("Digite o tipo: ")
+        document.write(calcArea(base, altura, tipo))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
