@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 01</title>
+    <script>
+        /*Este codigo recebe a data de nascimento e executa um 
+        calculo que define a qual casa o usuário pertencerá
+        */
+        //Declarando as variaveis.
+        let dia
+        let mes
+        let ano
+
+        //Recebendo a data de nascimento, inicializando as variaveis.
+        do{ 
+            dia = parseInt(prompt("Digite o dia do seu nascimento"))
+        }while(isNaN(dia) || dia < 1 || dia > 31)
+
+        do{
+            mes = parseInt(prompt("Digite o mes do seu nascimento"))
+        }while(isNaN(mes) || mes < 1 || mes > 12)
+
+        do{
+            ano = parseInt(prompt("Digite seu ano de nascimento"))
+        }while(isNaN(ano) || ano < 1921 || ano > 2021)
+
+        //Função que calcula a casa do usuário, recebe dia mes e ano de nascimento.
+        function chapeuSeletor(dia, mes, ano){
+            let resultado
+            resultado = (ano + mes) * dia
+            return resultado % 4
+        }
+
+        //Mostrando a casa para o usuário.
+        switch (chapeuSeletor(dia, mes, ano)) {
+            case 0:
+                document.write("Casa Gado Demais")
+                break;
+            case 1:
+                document.write("Casa Galo de Rinha")
+                break;
+            case 2:
+                document.write("Casa Lacraste")
+                break;
+            case 3:
+                document.write("Casa Smilingüido")
+                break;
+        }
+    </script>
+
+</head>
+<body>
+</body>
+</html>
