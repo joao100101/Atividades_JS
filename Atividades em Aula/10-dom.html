@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Document Object Model (DOM)</h1>
+        <ol>
+            <li>São Paulo</li>
+            <li>Minas Gerais</li>
+            <li>Rio de Janeiro</li>
+            <li>Paraná</li>
+        </ol>
+
+        <script>
+            /*
+            Manipulação do DOM
+
+            1) Capturar elementos do HTML e colocar eem variaveis do javascript
+
+            */
+           let item = document.querySelector('li')
+           item.style.color = 'red'
+           
+           let itens = document.querySelectorAll('li')
+           itens[1].style.color = 'green'
+           itens[2].style.color = 'yellow'
+        </script>
+    </body>
+</html>
