@@ -8,11 +8,11 @@
     </head>
     <body>
         <h1>Document Object Model (DOM)</h1>
-        <ol>
-            <li>São Paulo</li>
-            <li>Minas Gerais</li>
-            <li>Rio de Janeiro</li>
-            <li>Paraná</li>
+        <ol id="estados">
+            <li id="sp">São Paulo</li>
+            <li id="mg">Minas Gerais</li>
+            <li id="rj">Rio de Janeiro</li>
+            <li id="es">Espirito Santo</li>
         </ol>
 
         <script>
@@ -22,12 +22,29 @@
             1) Capturar elementos do HTML e colocar eem variaveis do javascript
 
             */
-           let item = document.querySelector('li')
-           item.style.color = 'red'
+           let texto1 = document.querySelector('h1')
+
+           texto1.textContent = "Estados da regiao sudeste"
+
+            let item = document.querySelector('li')
+            item.style.color = 'red'
            
-           let itens = document.querySelectorAll('li')
-           itens[1].style.color = 'green'
-           itens[2].style.color = 'yellow'
+            let itens = document.querySelectorAll('li')
+            itens[1].style.color = 'green'
+            itens[2].style.color = 'black'
+            itens[3].style.backgroundColor = 'cyan'
+        
+            let sp = document.getElementById('sp')
+            let mg = document.getElementById('mg')
+
+            sp.style.backgroundColor = 'black'
+            mg.style.backgroundColor = "gold"
+            
+            let rj = document.querySelector('#rj')
+            rj.style.fontWeight = 'bold'
+
+            let lista = document.querySelector('#estados')
+            lista.type = 'A'
         </script>
     </body>
 </html>

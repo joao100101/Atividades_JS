@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{
+            font-family: Calibri, Arial;
+        }
+        label{
+            display: block;
+        }
+        div{
+            margin-bottom: 20px;
+        }
+        fieldset{
+            border: 1px solid slategray;
+            border-radius: 10px;
+            height: 75px;
+            width: 125px;
+        }
+        fieldset label{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador de saudação</h1>
+
+    <div>
+        <label for="primeiro-nome">Primeiro Nome</label>
+        <input id="primeiro-nome">
+    </div>
+
+    <div>
+        <label for="sobrenome">Sobrenome</label>
+        <input id="sobrenome">
+    </div>
+
+    <div>
+        <label for="forma-trat">Forma de tratamento</label>
+        <select id="forma-trat">
+            <option>(Selecione)</option>
+            <option>Vossa Majestade</option>
+            <option>Excelentíssimo/a</option>
+            <option>Ilustrissimo/a</option>
+            <option>Vossa Senhoria</option>
+            <option>Senhor/ora</option>
+            <option>Cremosíssimo/a</option>
+        </select>
+    </div>
+
+    <fieldset>
+        <!-- Esse name igual nas duas opções servem pra nao deixar o usuario marcar as 2 opções ao msm tempo -->
+        <legend>SEXO</legend>
+        <input id="masculino" type="radio" name="sexo">
+        <label for="masculino">Masculino</label>
+        <br>
+        <input id="feminino" type="radio" name="sexo">
+        <label for="feminino">Feminino</label>
+    </fieldset>
+
+    <script>
+
+    </script>
+</body>
+</html>
