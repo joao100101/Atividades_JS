@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora DOM</title>
+    <style>
+        *{
+            text-align: center;
+            margin: 2px;
+        }
+        body{
+            background-color: #D3D3D3;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        #container{
+            width: 300px;
+            height: 250px;
+            background-color: cornflowerblue;
+            margin: 0px;
+            border-radius: 15px;
+           display: flex;
+            align-self: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #resultado{
+            position: absolute;
+            font-size: 30px;
+            margin-top: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1>Calculadora DOM</h1>
+
+    <div>
+        <label for="num1">Primeiro número</label>
+        <input id="num1" type="number">
+    </div>
+
+    <div>
+        <label for="oper">Operação</label><br>
+        <select id="oper">
+            <option>(Selecione)</option>
+            <option>Soma (+)</option>
+            <option>Subtração (-)</option>
+            <option>Multiplicação (*)</option>
+            <option>Divisão (/)</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="num2">Segundo número</label>
+        <input id="num2" type="number">
+    </div>
+
+    <div>
+        <button id="calcular">Calcular</button>
+    </div>
+    </div>
+    <div id="resultado"></div>
+    
+    <script>
+     
+        let button = document.getElementById("calcular");
+        button.addEventListener("click", function() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let operador = document.getElementById("oper").value;
+            let resultado = 0;
+            let div_res = document.getElementById("resultado");
+
+            if(operador.includes("+")){
+                resultado = num1 + num2;
+            }else if(operador.includes("-")){
+                resultado = num1 - num2;
+            }else if(operador.includes("*")){
+                resultado = num1 * num2;
+            }else if (operador.includes("/")){
+                resultado = num1 / num2;
+            }else{
+                resultado = "ERRO: Operador inválido."
+            }
+
+            div_res.innerHTML = '<h1>RESULTADO</h1>' + resultado;
+        });
+    </script>
+</body>
+</html>

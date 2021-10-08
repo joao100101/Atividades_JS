@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
     <style>
-        #btn-login{
+        #quadrado{
             width: 130px;
             height: 50px;
             border: 3px solid black;
@@ -14,7 +14,7 @@
             display: flex;
 
         }
-        #btn-login:hover{
+        #quadrado:hover{
             background-color: lime;
         }
         #name{
@@ -27,12 +27,13 @@
     <div id="container">
         <input id="nome"/>
         <button id="exibir"></button>
-        <div id="btn-login">
+        <div id="quadrado">
         </div>
     </div>
     <script>
         function onClick(){
             alert('Voce clickou no quadrado')
+            console.log(document.getElementById("nome").value);
         }
 
         function some(){
@@ -40,8 +41,10 @@
         }
 
         let quadrado = document.querySelector('#quadrado')
+        let nick = document.getElementById("nome").value;
+        
         quadrado.addEventListener('click', onClick)
-        quadrado.addEventListener("mouseenter", some)
+
     </script>
 </body>
 </html>
