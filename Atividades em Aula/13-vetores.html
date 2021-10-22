@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores</title>
+</head>
+<body>
+    
+
+    <script>
+        let vetorVazio1 = []
+        let vetorVazio2 = Array()
+
+        let numeros1 = [1, 2, 3, 4, 5]
+        let numeros2 = Array(1, 2, 3, 4, 5)
+
+        let frutas = ['maça', 'banana', 'pera', 'uva', 'laranja']
+
+        let mix = ['maça', 1, 1.23, true]
+
+        document.write(`Nós temos ${frutas.length} frutas, elas são: <br>`)
+        for(let fruta = 0 ; fruta < frutas.length ; fruta++){
+            document.write(`${fruta+1}. ${frutas[fruta]}<br>`)
+        }
+        let i = 2
+        frutas[i] = 'Melancia'
+        document.write(frutas.length + 1 + ". " + frutas[i] + '<br>')
+        console.log(frutas[frutas.length-1])
+
+        //
+        document.write('<hr>')
+        let carros = [] //vetor vazio
+
+
+        //Adiciona string no inicio do vetor
+        carros.push('Corcel')
+        carros.push('Fusca', 'Belina')
+        carros.push('Opala')
+        document.write(carros + '<br>')
+
+        //Adiciona no inicio do vetor
+        carros.unshift('Gol')
+        document.write(carros + '<br>')
+        carros.unshift('Brasília', 'Chevette')
+        document.write(carros + '<br>')
+
+        //inserção em posição intermediaria: splice()
+        //Parâmetros:
+        /*
+        1. a posicao em q o novo elemento será inserido
+        2. quantos elementos serao apagados? no caso de inserção 0
+        3. os novos elementos
+        */
+       //adicionando um carro na posição 3 do vetor
+       carros.splice(3,0,'Civic')
+       document.write(carros + '<br>')
+
+       //
+       carros.splice(6, 0, 'Maveric', 'Del Rey')
+
+       //deletando um carro da posição 3 do vetor
+       carros.splice(3, 1)
+       document.write(carros + '<br>')
+    </script>
+
+</body>
+</html>
