@@ -10,6 +10,9 @@
     
 
     <script>
+        function separar(){
+            document.write('<hr>')
+        }
         let vetorVazio1 = []
         let vetorVazio2 = Array()
 
@@ -30,7 +33,7 @@
         console.log(frutas[frutas.length-1])
 
         //
-        document.write('<hr>')
+        separar()
         let carros = [] //vetor vazio
 
 
@@ -40,7 +43,7 @@
         carros.push('Opala')
         document.write(carros + '<br>')
 
-        //Adiciona no inicio do vetor
+        //a no inicio do vetor
         carros.unshift('Gol')
         document.write(carros + '<br>')
         carros.unshift('Brasília', 'Chevette')
@@ -63,6 +66,40 @@
        //deletando um carro da posição 3 do vetor
        carros.splice(3, 1)
        document.write(carros + '<br>')
+
+
+        //Iterando as listas
+
+        //1 forma
+        separar()
+        for(let i = 0 ; i < carros.length ; i++){
+            document.write(carros[i] + '<br>')
+        }
+
+        //2 Forma
+        separar()
+        for(let c of carros){
+            document.write(c + '<br>')
+        }
+        //3 forma
+        separar()
+        frutas.forEach(function(fruta){
+            document.write(fruta.toLocaleLowerCase() + '<br>')
+        })
+
+        //Mostrando posiçao de cada valor da lista
+        separar()
+        document.write('Posição do chevette: ' + carros.indexOf('Chevette'))
+        document.write('<br>Posição da Maçã: ' + frutas.indexOf('maça'))
+        separar()
+        /*
+        Verificando se existe um valor na lista ou nao
+        retorna um valor boolean
+        funcao: includes
+        */
+       document.write('<a href="https://www.google.com" target="_blank">Google</a>')
+        let cac = "Audi"
+        document.write(`"${cac}" existe em carros? ${carros.includes(cac)}`)
     </script>
 
 </body>
