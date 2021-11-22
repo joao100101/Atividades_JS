@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 19</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+             1) Declare um objeto pet1 que represente um cão e preencha as
+            seguintes propriedades:
+            - nome
+            - raça
+            - cor
+            - sexo
+            - nome do pai (nome da propriedade com espaços)
+            - nome da mãe (nome da propriedade com espaços)
+            2) Crie um objeto pet2, copiando do primeiro:
+            let pet2 = pet1
+            E troque algumas das características de pet2
+            3) Use dois for..in para listar os objetos: pet1 e pet2
+            
+        */
+
+        let pet1 = {}
+        pet1.nome = 'Pitucho',
+        pet1.raça = 'Vira Lata',
+        pet1.cor = 'Preto',
+        pet1.sexo = 'Macho'
+        pet1['nome do pai'] = "Mike";
+        pet1['nome da mãe'] = 'Nina';
+
+        let pet2 = {...pet1};
+
+        pet2.nome = "Marreta"
+        pet2.cor = "Caramelo"
+        for(let atributo in pet1) {
+            document.write(`${atributo} => ${pet1[atributo]}<br>`)
+        }
+        document.write(`<hr>`)
+        for(let atributo in pet2) {
+            document.write(`${atributo} => ${pet2[atributo]}<br>`)
+        }
+    </script>
+</body>
+</html>
